@@ -1,0 +1,35 @@
+---
+interface Props {
+  img: string;
+  liveLink: string;
+  title: string;
+  description: string;
+  githubLink: string;
+}
+
+const { img, liveLink, title, description, githubLink } = Astro.props;
+---
+
+<article class="card w-72 my-5 bg-base-100 shadow-xl md:w-80">
+  <figure>
+    <img src={img} alt={title} />
+  </figure>
+  <div class="card-body">
+    <h3 class="card-title">{title}</h3>
+    <p>{description}</p>
+    <div class="card-actions justify-end mt-5">
+      {
+        githubLink !== "" ? (
+          <a href={githubLink} class="btn btn-warning">
+            GitHub
+          </a>
+        ) : (
+          <button disabled class="btn btn-warning">
+            GitHub
+          </button>
+        )
+      }
+      <a href={liveLink} class="btn btn-info">En Vivo</a>
+    </div>
+  </div>
+</article>
