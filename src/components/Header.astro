@@ -1,9 +1,4 @@
----
-import Moon from "./icons/Moon.astro";
-import Sun from "./icons/Sun.astro";
----
-
-<header>
+<header class="fixed w-screen z-50">
   <div class="navbar bg-base-100 sm:px-20 md:px-32 lg:px-40">
     <div class="navbar-start">
       <div class="dropdown">
@@ -25,18 +20,16 @@ import Sun from "./icons/Sun.astro";
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-xl bg-base-300 rounded-box w-52"
         >
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
-          <li><a>Item 3</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">Gregory Vicent</a>
+      <a href="#inicio" class="btn btn-ghost text-xl">Gregory Vicent</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
       </ul>
     </div>
     <div class="navbar-end gap-2">
@@ -59,10 +52,10 @@ import Sun from "./icons/Sun.astro";
   themeController?.addEventListener("click", (e) => {
     if (e.target?.value === "dark") {
       e.target.value = "light";
-      themeImage?.setAttribute("src", "/public/icons/Sun.svg");
+      themeImage?.setAttribute("src", "/icons/Sun.svg");
     } else {
       e.target.value = "dark";
-      themeImage?.setAttribute("src", "/public/icons/Moon.svg");
+      themeImage?.setAttribute("src", "/icons/Moon.svg");
     }
   });
 </script>

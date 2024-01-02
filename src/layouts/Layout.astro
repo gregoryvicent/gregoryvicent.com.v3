@@ -19,22 +19,38 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Header />
-    <main class="px-10">
+    <div class="relative">
+      <Header />
+    </div>
+    <main class="px-10 sm:px-20 md:px-28 lg:px-40">
       <slot />
     </main>
   </body>
 </html>
 
 <style is:global>
-	h2 {
-		font-size: 1.5rem;
-		font-weight: 700;
+	html {
+		scroll-behavior: smooth;
 	}
-	section {
-		display: flex;
-		min-height: 100vh;
-		justify-content: center;
-		align-items: center;
+
+	body {
+		overflow-x: hidden;
+	}
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  section {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+	@media(min-width: 640px) {
+		h2 {
+			font-size: 2rem;
+		}
 	}
 </style>

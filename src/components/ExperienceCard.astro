@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  place: string;
+  company: string;
+  description: string;
+  jobDate: string;
+  tecnology: string[];
+}
+
+const { title, place, company, description, jobDate, tecnology } = Astro.props;
+---
+
+<div class="card bg-primary-content text-primary my-10 max-w-96">
+  <div class="card-body">
+    <h3 class="card-title">{title}</h3>
+      <p>{company}</p>
+    <div class="my-5 flex flex-col">
+      <date><small><b>{jobDate}</b></small></date>
+      <small>{place}</small>
+    </div>
+    <p class="text-start">{description}</p>
+    <div class="mt-5">
+      {
+        tecnology.map((tech) => (
+          <div class="badge badge-accent m-1">{tech}</div>
+        ))
+      }
+    </div>
+  </div>
+</div>

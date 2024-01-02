@@ -1,0 +1,77 @@
+---
+import ExperienceCard from "../ExperienceCard.astro";
+---
+
+<section class="pt-16" id="experiencia">
+  <div class="w-full">
+    <h2>Experiencia</h2>
+    <div class="flex justify-center">
+      <ul class="steps steps-vertical">
+        <li data-content="●" class="step step-primary">
+          <ExperienceCard
+            title="Freelance"
+            description="Trabaje como desarrollador web freelance para múltiples clientes de todo el mundo tanto para individuos como para empresas que requieran mis servicios y conocimientos en el desarrollo web tanto del lado del Backend como del Frontend."
+            jobDate="jun 2022 - ene 2024"
+            place="Remoto"
+            company="Programador Independiente"
+            tecnology={[
+              "spring framework",
+              "java",
+              "docker",
+              "postgresql",
+              "typescript",
+              "django",
+              "javascript",
+              "sql",
+              "python",
+              "nodejs",
+              "mysql",
+              "git",
+              "nextjs",
+              "reactjs",
+              "css",
+              "html",
+            ]}
+          />
+        </li>
+        <li data-content="★" class="step step-primary">
+          <ExperienceCard
+            title="Frontend Web Developer"
+            description="En PeekAll trabaje durante unos meses como desarrollador web Frontend usando Typescript, React.js y Next.js para la creación del Frontend de la aplicación web de una red social que conectaba deportistas con coaches. "
+            jobDate="feb 2021 - may 2021"
+            place="Remoto - Panamá"
+            company="PeekAll"
+            tecnology={[
+              "typescript",
+              "javascript",
+              "css",
+              "git",
+              "nextjs",
+              "reactjs",
+              "html",
+            ]}
+          />
+        </li>
+        <li data-content="★" class="step step-primary">
+          <ExperienceCard
+            title="Programador Full Stack"
+            description="En la Alcaldía de Caracas inicie en un equipo multidisciplinario enfocado en el desarrollo de sistemas y en la creación y mantenimiento de aplicativos web orientados al uso interno de la organización usando tecnologías como HTML, CSS, Javascript y en particular Java y PHP para el backend de dichas aplicaciones web."
+            jobDate="abr 2018 - ene 2021"
+            place="Caracas, Venezuela"
+            company="Alcaldia de Caracas"
+            tecnology={[
+              "spring framework",
+              "java",
+              "postgresql",
+              "javascript",
+              "php",
+              "html",
+              "css",
+              "git",
+            ]}
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

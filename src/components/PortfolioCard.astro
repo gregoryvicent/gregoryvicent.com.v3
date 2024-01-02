@@ -20,7 +20,7 @@ const { img, liveLink, title, description, githubLink } = Astro.props;
     <div class="card-actions justify-end mt-5">
       {
         githubLink !== "" ? (
-          <a href={githubLink} class="btn btn-warning">
+          <a href={githubLink} class="btn btn-warning" target="_blank" rel="nofollow">
             GitHub
           </a>
         ) : (
@@ -29,7 +29,7 @@ const { img, liveLink, title, description, githubLink } = Astro.props;
           </button>
         )
       }
-      <a href={liveLink} class="btn btn-info">En Vivo</a>
+      <a href={liveLink} class="btn btn-info" target="_blank" rel="nofollow">En Vivo</a>
     </div>
   </div>
 </article>
