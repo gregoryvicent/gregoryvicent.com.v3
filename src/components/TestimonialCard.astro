@@ -1,0 +1,26 @@
+---
+interface Props {
+  content: string;
+  linkOrigin: string;
+  author: string;
+}
+
+const { content, linkOrigin, author } = Astro.props;
+---
+
+<article class="py-10 sm:px-16 lg:px-40">
+  <p class="my-16 text-2xl font-light">
+    <i>
+      {content}
+    </i>
+  </p>
+  <div class="flex justify-end items-center gap-5">
+    <a
+      class="link link-secondary text-sm sm:text-base"
+      href={linkOrigin}
+      target="_blank"
+      rel="nofollow">Comentario Original</a
+    >
+    <p class="font-bold text-sm sm:text-base">{author}</p>
+  </div>
+</article>
