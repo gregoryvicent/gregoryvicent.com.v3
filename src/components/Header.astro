@@ -56,11 +56,13 @@
   const themeImage = document.getElementById("theme-image");
 
   themeController?.addEventListener("click", (e) => {
-    if (e.target?.value === "dark") {
-      e.target.value = "light";
+    const target = e.target as HTMLButtonElement
+
+    if (target.value === "dark") {
+      target.value = "light";
       themeImage?.setAttribute("src", "/icons/Sun.svg");
     } else {
-      e.target.value = "dark";
+      target.value = "dark";
       themeImage?.setAttribute("src", "/icons/Moon.svg");
     }
   });
